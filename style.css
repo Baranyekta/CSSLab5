@@ -1,0 +1,208 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* loading custom fonts */
+
+    @font-face {
+        font-family: 'PT Serif';
+        src: url('PT_Serif\PTSerif-Regular.ttf') format('truetype');
+    }
+
+/* navigation menu */
+
+nav {
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+    
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+    
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+    
+nav a {
+    display: block;
+    padding: 10px;
+    color: #a66;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+    
+nav a:hover {
+    color: #fff;
+    background-color: #a66;
+}
+    
+nav a:active {
+    background-color: #800000;
+    color: #fff;
+}
+    
+/* applying custom fonts */
+
+body {
+    font-size: 10px; 
+    line-height: 1.5;
+    font-family: 'PT Serif', serif;
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', serif;
+}
+
+/* appropriate font-sizes (heading & other element types using relative units) */
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+    
+h2 {
+    font-size: 2rem;
+}
+    
+h3 {
+    font-size: 1.5rem;
+}
+    
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    letter-spacing: 0.01em; 
+    text-indent: 20px; 
+    line-height: 1.5; /* line-height for paragraphs */
+}
+  
+/* layout */
+
+section {
+    float: left;
+    width: 50%;
+}
+  
+aside {
+    float: left;
+    width: 30%;
+}
+  
+nav {
+    float: left;
+    width: 20%;
+}
+  
+footer {
+    clear: both;
+}
+  
+header, section, aside, nav, footer {
+    padding: 20px;
+}
+  
+/* header and footer */
+
+header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+    background-color: #f5f5f5;
+}
+  
+header h1 {
+    margin: 0;
+}
+    
+footer p {
+    margin: 0;
+}
+
+/* links */
+
+a {
+    color: #a66;
+    text-decoration: none;
+    text-decoration-skip-ink: none;
+    font-size: 18px;
+}
+
+a:visited {
+    color: #a66;
+}
+        
+a:focus, a:hover {
+    color: #fff;
+    background-color: #a66;
+    text-decoration: none;
+}
+
+/* remove focus outline from all links */
+a:focus {
+    outline: none;
+}
+
+/* active state */
+a:active {
+    background-color: #800000;
+    color: #fff;
+}
+
+/* external links */
+a[href^="http"]::after {
+    content: url("external-link-52.png");
+    margin-left: 5px;
+    width: 10px; /* set the desired width */
+    height: 10px; /* set the desired height */
+}
+    
+/* lists */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+ul li, ol li {
+    padding-left: 20px;
+    list-style-position: outside;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+}
+        
+ul li:before {
+    content: "\2022";
+    margin-right: 10px;
+}
+        
+ol li:before {
+    content: counter(item) ".";
+    margin-right: 10px;
+}
+        
+/* miscellaneous */
+p {
+    line-height: 1.5;
+}
+            
+@media screen and (max-width: 1000px) {
+    section, aside, nav {
+    float: none;
+    width: 100%;
+    }
+}
+          
